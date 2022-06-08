@@ -31,19 +31,18 @@ class Earbuds {
   function get_color() {
     return $this->color;
   }
-  public function __construct($version, $color) {
-  $this->versionn = $version;
-  $this->color = $color;
+  public function __construct($version) {
+  $this->version = $version;
   }
 
   public function intro() {
-  echo "The Sort of this earbud is {$this->version} and the color is {$this->color}.";
+  echo "The Sort of this earbud is {$this->version}";
   }
 
 }
 
 
-$earbuds = new Earbuds();
+$earbuds = new Earbuds("Wired");
 $earbuds->set_item('Wireless Earbuds');
 $earbuds->set_name('Airpods Pro');
 $earbuds->set_price('$199');
@@ -60,10 +59,11 @@ echo "Color: " . $earbuds->get_color();
 
 class Sort extends Earbuds {
 public function message() {
-  echo "Am I wireless ,wired or wireless with reciever? ";
+  echo "<br>";
+  echo "Am I wireless, wired or wireless with reciever? ";
 }
 }
-$strawberry = new Sort("Wired", "Red");
+$strawberry = new Sort("Wired");
 $strawberry->message();
 $strawberry->intro();
 
