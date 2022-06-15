@@ -1,10 +1,10 @@
 <?php
 class Earbuds {
   // Properties
-  public $item;
-  public $name;
-  public $price;
-  public $color;
+  protected $item;
+  protected $name;
+  protected $price;
+  protected $color;
 
   // Methods
   function set_item($item) {
